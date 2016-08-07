@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1469913569 source:/home/mauricio/Escritorio/Proyecto Archivos/Proyecto Archivos/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1470151910 source:/home/mauricio/Escritorio/Proyecto Archivos/Proyecto Archivos/terminal.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	"Analizadores/Discos.h"
+	"Analizadores/lexico.h"
+
+1469916907 source:/home/mauricio/Escritorio/Proyecto Archivos/Proyecto Archivos/Analizadores/lexico.c
+
+1469916808 source:/home/mauricio/Escritorio/Proyecto Archivos/Proyecto Archivos/Analizadores/sintactico.c
+
+1469916907 /home/mauricio/Escritorio/Proyecto Archivos/Proyecto Archivos/Analizadores/lexico.c
+
+1470153005 /home/mauricio/Escritorio/Proyecto Archivos/Proyecto Archivos/Analizadores/lexico.h
+
+1470232405 /home/mauricio/Escritorio/Proyecto Archivos/Proyecto Archivos/Analizadores/Discos.h
+
+1469993239 source:/home/mauricio/Escritorio/Proyecto Archivos/Proyecto Archivos/Analizadores/Discos.c
+	"Discos.h"
+
