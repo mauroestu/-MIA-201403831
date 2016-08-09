@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include <ctype.h>
 #include "Analizadores/Discos.h"
 #include "Analizadores/lexico.h"
-
-
 
 void RevisarComando(char comando[]);
 void Inicializar();
@@ -21,8 +20,6 @@ int main()
         RevisarComando(comando);
         strcpy(comando,"");
         getchar();
-
-
     }
     getchar();
     return 0;
@@ -52,7 +49,14 @@ void RevisarComando(char comando[])
         {
             if(comando[i] != ' ')
             {
-                if(comando[i]=='M' || comando[i]=='K')
+                if(comando[i] == 'B' && comando[i+1] == 'F')
+                {
+                    temporal[contador] = comando[i];
+                    contador++; i++;
+                    temporal[contador] = comando[i];
+                }
+                else if(comando[i]=='M' || comando[i]=='K' || comando[i] == 'B' || comando[i] == 'P' ||
+                comando[i] == 'E' || comando[i] == 'L' || comando[i] == 'F' ||  comando[i] == 'W')
                 {
                     temporal[contador] = comando[i];
                 }
@@ -103,6 +107,7 @@ void RevisarComando(char comando[])
     SelectorComandos();
     InicializarValores();
     InicializarComandos();
+
 }
 
 

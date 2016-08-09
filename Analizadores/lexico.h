@@ -15,10 +15,26 @@ char delet[10] = "+delete"; int delet_e = 12;
 char add[10] = "+add"; int add_e = 13;
 char idn[10] = "-id"; int idn_e = 14;
 char puntos[10] = "::"; int puntos_e = 15;
-char bytes[10] = "K"; int bytes_e = 16;
+char kbytes[10] = "K"; int kbytes_e = 16;
 char mega[10] = "M"; int mega_e = 17;
 int cadena = 18; int entero = 19;
 char vda[10] = "vd"; int vda_e = 20;
+char bytes[10] = "B"; int bytes_e = 21;
+
+char rep[10] = "rep"; int rep_e = 22;
+char rmbr[10] = "mbr"; int mbr_e = 23;
+char disk[10] = "disk"; int disk_e = 24;
+char exec[10] = "exec"; int exec_e = 25;
+
+char primaria[10] = "P"; int primaria_e = 26;
+char extendida[10] = "E"; int extendida_e = 27;
+char logica[10] = "L"; int logica_e = 28;
+
+char BestFit[10] = "BF"; int BestFit_e = 29;
+char FirstFit[10] = "FF"; int FirstFit_e = 30;
+char WorstFit[10] = "WF"; int WorstFit_e = 31;
+char Fast[10] = "Fast"; int Fast_e = 32;
+char Full[10] = "Full"; int Full_e = 33;
 
 //Variables globales
 int contador = 0; //contador de caracteres
@@ -70,7 +86,6 @@ int Analizar()
         }
         else if(strcmp(temporal,sizec)==0)
         {
-
             Automata(0,temporal,sizec_e);
             Inicializar();
             return 1;
@@ -101,26 +116,31 @@ int Analizar()
         }
         else if(strcmp(temporal,fdisk)==0)
         {
+            Automata(0,temporal,fdisk_e);
             Inicializar();
             return 1;
         }
         else if(strcmp(temporal,type)==0)
         {
+            Automata(0,temporal,type_e);
             Inicializar();
             return 1;
         }
         else if(strcmp(temporal,fit)==0)
         {
+            Automata(0,temporal,fit_e);
             Inicializar();
             return 1;
         }
         else if(strcmp(temporal,delet)==0)
         {
+            Automata(0,temporal,delet_e);
             Inicializar();
             return 1;
         }
         else if(strcmp(temporal,add)==0)
         {
+            Automata(0,temporal,add_e);
             Inicializar();
             return 1;
         }
@@ -148,21 +168,81 @@ int Analizar()
             Inicializar();
             return 1;
         }
+        else if(strcmp(temporal,exec) == 0)
+        {
+            Automata(0,temporal,exec_e);
+            Inicializar();
+            return 1;
+        }
         else if(strcmp(temporal,puntos)==0)
         {
             Automata(0,temporal,puntos_e);
             Inicializar();
             return 1;
         }
-        else if(strcmp(temporal,bytes)==0)
+        else if(strcmp(temporal,kbytes)==0)
         {
-            Automata(0,temporal,bytes_e);
+            Automata(0,temporal,kbytes_e);
             Inicializar();
             return 1;
         }
         else if(strcmp(temporal,mega)==0)
         {
             Automata(0,temporal,mega_e);
+            Inicializar();
+            return 1;
+        }
+        else if(strcmp(temporal,bytes) == 0)
+        {
+            Automata(0,temporal,bytes_e);
+            Inicializar();
+            return 1;
+        }
+        else if(strcmp(temporal,primaria) == 0)
+        {
+            Automata(0,temporal,primaria_e);
+            Inicializar();
+            return 1;;
+        }
+        else if(strcmp(temporal,extendida) == 0)
+        {
+            Automata(0,temporal,extendida_e);
+            Inicializar();
+            return 1;
+        }
+        else if(strcmp(temporal,logica) == 0)
+        {
+            Automata(0,temporal,logica_e);
+            Inicializar();
+            return 1;
+        }
+        else if(strcmp(temporal,BestFit) == 0)
+        {
+            Automata(0,temporal,BestFit_e);
+            Inicializar();
+            return 1;
+        }
+        else if(strcmp(temporal,FirstFit) == 0)
+        {
+            Automata(0,temporal,FirstFit_e);
+            Inicializar();
+            return 1;
+        }
+        else if(strcmp(temporal,WorstFit) == 0)
+        {
+            Automata(0,temporal,WorstFit_e);
+            Inicializar();
+            return 1;
+        }
+        else if(strcmp(temporal,Fast) == 0)
+        {
+            Automata(0,temporal,Fast_e);
+            Inicializar();
+            return 1;
+        }
+        else if(strcmp(temporal,Full) == 0)
+        {
+            Automata(0,temporal,Full);
             Inicializar();
             return 1;
         }
@@ -193,15 +273,17 @@ void Automata(int entero, char token[], int id_token)
         case 0:
             switch(id_token)        //Estado inicial, para seleccionar un comando
             {
-                case 1: estado = 1;
+                case 1: estado = 1; //mkdisk
                 break;
-                case 2: estado = 2;
+                case 2: estado = 2; //rmdisk
                 break;
-                case 3: estado = 3;
+                case 3: estado = 3; //fdisk
                 break;
-                case 4: estado = 4;
+                case 4: estado = 4; //mount
                 break;
-                case 5: estado = 5;
+                case 5: estado = 5; //umount
+                break;
+                case 25: estado = 24; //exec
                 break;
                 default:
                 printf("Se esperaba el inicio de un comando\n\n");
@@ -239,7 +321,36 @@ void Automata(int entero, char token[], int id_token)
                 return;
             }
         break;
-        case 3:
+        case 3: //Comandos de fdisk
+            switch(id_token)
+            {
+                case 6: estado = 27;//size-
+                break;
+                case 7: estado = 29; //unit-
+                break;
+                case 8: estado = 31; //path-
+                break;
+                case 9: estado = 33; //name-
+                break;
+                case 10: estado = 35; //type-
+                break;
+                case 11: estado = 37; //fit-
+                break;
+                case 12: estado = 39; //delete-
+                break;
+                case 13: estado = 41; //add
+                break;
+                default:
+                    if(crear == 1)
+                    {estado = 0; c_fdisk = 1;}
+                    else if(eliminar == 1)
+                    {estado = 0; c_fdisk = 1;}
+                    else if(agregar == 1)
+                    {estado = 0; c_fdisk = 1;}
+                    else
+                    { printf("Faltan parámetros del comando fdisk.\n\n"); }
+                return;
+            }
         break;
         case 4: //Comandos de mount
             switch(id_token)
@@ -451,6 +562,210 @@ void Automata(int entero, char token[], int id_token)
                 break;
                 default:
                 printf("Se esperaba un número.\n\n");
+                return;
+            }
+        break;
+        case 24: //Para ejecutar scripts con exec, path
+            switch(id_token)
+            {
+                case 8: estado = 25;
+                break;
+                default:
+                printf("Se esperaba la palabra -path.\n\n");
+                return;
+            }
+        break;
+        case 25: //Comando exec, ::
+            switch(id_token)
+            {
+                case 15: estado = 26;
+                break;
+                default:
+                printf("Se esperaba ::\n\n");
+                return;
+            }
+        break;
+        case 26: //Comando exec, cadena que trae el path
+            switch(id_token)
+            {
+                case 18: estado = 0; strcpy(fichero,temporal); c_exec = 1;
+                break;
+                default:
+                printf("Se esperaba una cadena con el path del script.\n\n");
+                return;
+            }
+        break;
+        case 27: //:: para size
+            switch(id_token)
+            {
+                case 15: estado = 28;
+                break;
+                default:
+                printf("Se esperaba ::\n\n");
+                return;
+            }
+        break;
+        case 28: //numero para size
+            switch(id_token)
+            {
+                case 19: estado = 3; crear = 1;
+                break;
+                default:
+                printf("Se esperaba un numero que indique el tamaño de la partición.\n\n");
+                return;
+            }
+        break;
+        case 29: //:: para unit
+            switch(id_token)
+            {
+                case 15: estado = 30;
+                break;
+                default:
+                printf("Se esperaba ::\n\n");
+                return;
+            }
+        break;
+        case 30: //unidades para unit
+            switch(id_token)
+            {
+                case 16: estado = 3;
+                break;
+                case 17: estado = 3;
+                break;
+                case 21: estado = 3;
+                break;
+                default:
+                printf("Se esparaba K, B o M para el tipo de unidades.\n\n");
+                return;
+            }
+        break;
+        case 31: // :: para path
+            switch(id_token)
+            {
+                case 15: estado = 32;
+                break;
+                default:
+                printf("Se esperaba ::\n\n");
+                return;
+            }
+        break;
+        case 32: //cadena para path
+            switch(id_token)
+            {
+                case 18: estado = 3;
+                break;
+                default:
+                printf("Se esperaba una cadena que represente el path.\n\n");
+                return;
+            }
+        break;
+        case 33: //:: para name
+            switch(id_token)
+            {
+                case 15: estado = 34;
+                break;
+                default:
+                printf("Se esperaba ::\n\n");
+                return;
+            }
+        break;
+        case 34: //cadena para name
+            switch(id_token)
+            {
+                case 18: estado = 3;
+                break;
+                default:
+                printf("Se esperaba una cadena que represente el nombre de la partición.\n\n");
+                return;
+            }
+        break;
+        case 35: //:: para type
+            switch(id_token)
+            {
+                case 15: estado = 36;
+                break;
+                default:
+                printf("Se esperaba ::\n\n");
+                return;
+            }
+        break;
+        case 36: //tipos para type
+            switch(id_token)
+            {
+                case 26: estado = 3;
+                break;
+                case 27: estado = 3;
+                break;
+                case 28:  estado = 3;
+                break;
+                default:
+                printf("Se esperaba P, E o L para el tipo de partición.\n\n");
+                return;
+            }
+        break;
+        case 37: //:: para fit
+            switch(id_token)
+            {
+                case 15: estado = 38;
+                break;
+                default:
+                printf("Se esperaba ::\n\n");
+                return;
+            }
+        break;
+        case 38: // ajustes para fit
+            switch(id_token)
+            {
+                case 29: estado = 3;
+                break;
+                case 30: estado = 3;
+                break;
+                case 31: estado = 3;
+                break;
+                default:
+                printf("Se esperaba BF, FF o WF para indicar el tipo de ajuste.\n\n");
+                break;
+            }
+        break;
+        case 39: //:: para delete
+            switch(id_token)
+            {
+                case 15: estado = 40;
+                break;
+                default:
+                printf("Se esperaba ::\n\n");
+                return;
+            }
+        break;
+        case 40: //tipos para delete
+            switch(id_token)
+            {
+                case 32: estado = 3; eliminar = 1;
+                break;
+                case 33: estado = 3; eliminar = 1;
+                break;
+                default:
+                printf("Se esperaba Fast o Full para el tipo de eliminado.\n\n");
+                break;
+            }
+        break;
+        case 41: //:: para add
+            switch(id_token)
+            {
+                case 15: estado = 42;
+                break;
+                default:
+                printf("Se esperaba ::\n\n");
+                return;
+            }
+        break; //numero para add
+        case 42:
+            switch(id_token)
+            {
+                case 19: estado = 3; agregar = 1;
+                break;
+                default:
+                printf("Se esperaba un númeroo para agregar a la partición.\n\n");
                 return;
             }
         break;

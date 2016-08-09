@@ -1,0 +1,27 @@
+char mkdisk[10] = "mkdisk"; int mkdisk_e = 1; char mkdisk_param[4] = "";
+char rmdisk[10] = "rmdisk"; int rmdisk_e = 2;
+char fdisk[10] = "fdisk"; int fdisk_e = 3;
+char mount[10] = "mount"; int mount_e = 4; char mount_param[2] = "";
+char umount[10] = "umount"; int umount_e = 5;
+
+char sizec[10] = "-size";   int sizec_e = 6;
+char unit[10] = "+unit"; int unit_e = 7;
+char path[10] = "-path"; int path_e = 8;
+char namec[10] = "-name"; int namec_e = 9;
+
+char type[10] = "+type"; int type_e = 10;
+char fit[10] = "+fit"; int fit_e = 11;
+char delet[10] = "+delete"; int delet_e = 12;
+char add[10] = "+add"; int add_e = 13;
+char idn[10] = "-id"; int idn_e = 14;
+char puntos[10] = "::"; int puntos_e = 15;
+char kbytes[10] = "K"; int kbytes_e = 16;
+char mega[10] = "M"; int mega_e = 17;
+int cadena = 18; int entero = 19;
+char vda[10] = "vd"; int vda_e = 20;
+char bytes[10] = "B"; int bytes_e = 21;
+
+char rep[10] = "rep"; int rep_e = 22;
+char rmbr[10] = "mbr"; int mbr_e = 23;
+char disk[10] = "disk"; int disk_e = 24;
+char exec[10] = "exec"; int exec_e = 25;
