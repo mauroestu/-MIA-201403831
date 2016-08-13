@@ -102,6 +102,24 @@ int Analizar()
             Inicializar();
             return 1;
         }
+        else if(strcmp(temporal,rep) == 0)
+        {
+            Automata(0,temporal,rep_e);
+            Inicializar();
+            return 1;
+        }
+        else if(strcmp(temporal,rmbr) == 0)
+        {
+            Automata(0,temporal,mbr_e);
+            Inicializar();
+            return 1;
+        }
+        else if(strcmp(temporal,disk) == 0)
+        {
+            Automata(0,temporal,disk_e);
+            Inicializar();
+            return 1;
+        }
         else if(strcmp(temporal,namec)==0)
         {
             Automata(0,temporal,namec_e);
@@ -283,6 +301,8 @@ void Automata(int entero, char token[], int id_token)
                 break;
                 case 5: estado = 5; //umount
                 break;
+                case 22: estado = 43; //rep
+                break;
                 case 25: estado = 24; //exec
                 break;
                 default:
@@ -369,6 +389,7 @@ void Automata(int entero, char token[], int id_token)
                 else
                 {
                     printf("Mostrando Particiones...\n\n");
+                    mostrarParticiones();
                 }
                 return;
             }
@@ -380,6 +401,7 @@ void Automata(int entero, char token[], int id_token)
                 break;
                 default:
                 estado = 0;
+                comando_umount();
                 return;
             }
         break;
@@ -525,7 +547,7 @@ void Automata(int entero, char token[], int id_token)
                 return;
             }
         break;
-        case 20:
+        case 20: //mount, numero para id
             switch(id_token)
             {
                 case 19: estado = 21;
@@ -535,33 +557,23 @@ void Automata(int entero, char token[], int id_token)
                 return;
             }
         break;
-        case 21:
+        case 21: //mount, :: para mount
             switch(id_token)
             {
-                case 15: estado = 22;
+                case 15: estado = 23;
                 break;
                 default:
                 printf("Se esperaba ::\n\n");
                 return;
             }
         break;
-        case 22:
-            switch(id_token)
-            {
-                case 20: estado = 23; strcpy(particion,token);
-                break;
-                default:
-                printf("Se esperaba la palabra vd.\n\n");
-                return;
-            }
-        break;
         case 23:
             switch(id_token)
             {
-                case 19: estado = 5; strcat(particion,token);
+                case 18: estado = 5; memset(cadId,0,30); strcat(cadId,token); comando_umount();
                 break;
                 default:
-                printf("Se esperaba un número.\n\n");
+                printf("Se esperaba un path con el id a desmontar.\n\n");
                 return;
             }
         break;
@@ -608,7 +620,7 @@ void Automata(int entero, char token[], int id_token)
         case 28: //numero para size
             switch(id_token)
             {
-                case 19: estado = 3; crear = 1;
+                case 19: estado = 3; tamanio = entero; crear = 1;
                 break;
                 default:
                 printf("Se esperaba un numero que indique el tamaño de la partición.\n\n");
@@ -628,14 +640,14 @@ void Automata(int entero, char token[], int id_token)
         case 30: //unidades para unit
             switch(id_token)
             {
-                case 16: estado = 3;
+                case 16: estado = 3; unidad = 'K';
                 break;
-                case 17: estado = 3;
+                case 17: estado = 3; unidad = 'M';
                 break;
-                case 21: estado = 3;
+                case 21: estado = 3; unidad = 'B';
                 break;
                 default:
-                printf("Se esparaba K, B o M para el tipo de unidades.\n\n");
+                printf("Se esparaba K, M o B para el tipo de unidades.\n\n");
                 return;
             }
         break;
@@ -652,7 +664,7 @@ void Automata(int entero, char token[], int id_token)
         case 32: //cadena para path
             switch(id_token)
             {
-                case 18: estado = 3;
+                case 18: estado = 3; strcpy(fichero,token);
                 break;
                 default:
                 printf("Se esperaba una cadena que represente el path.\n\n");
@@ -672,7 +684,7 @@ void Automata(int entero, char token[], int id_token)
         case 34: //cadena para name
             switch(id_token)
             {
-                case 18: estado = 3;
+                case 18: estado = 3; strcpy(nombre,token);
                 break;
                 default:
                 printf("Se esperaba una cadena que represente el nombre de la partición.\n\n");
@@ -692,11 +704,11 @@ void Automata(int entero, char token[], int id_token)
         case 36: //tipos para type
             switch(id_token)
             {
-                case 26: estado = 3;
+                case 26: estado = 3; tipo = 'P';
                 break;
-                case 27: estado = 3;
+                case 27: estado = 3; tipo = 'E';
                 break;
-                case 28:  estado = 3;
+                case 28:  estado = 3; tipo = 'L';
                 break;
                 default:
                 printf("Se esperaba P, E o L para el tipo de partición.\n\n");
@@ -716,11 +728,11 @@ void Automata(int entero, char token[], int id_token)
         case 38: // ajustes para fit
             switch(id_token)
             {
-                case 29: estado = 3;
+                case 29: estado = 3; strcpy(ajustefit,token);
                 break;
-                case 30: estado = 3;
+                case 30: estado = 3; strcpy(ajustefit,token);
                 break;
-                case 31: estado = 3;
+                case 31: estado = 3; strcpy(ajustefit,token);
                 break;
                 default:
                 printf("Se esperaba BF, FF o WF para indicar el tipo de ajuste.\n\n");
@@ -740,9 +752,9 @@ void Automata(int entero, char token[], int id_token)
         case 40: //tipos para delete
             switch(id_token)
             {
-                case 32: estado = 3; eliminar = 1;
+                case 32: estado = 3; eliminar = 1; strcpy(tEliminacion,"Fast");
                 break;
-                case 33: estado = 3; eliminar = 1;
+                case 33: estado = 3; eliminar = 1; strcpy(tEliminacion,"Full");
                 break;
                 default:
                 printf("Se esperaba Fast o Full para el tipo de eliminado.\n\n");
@@ -766,6 +778,87 @@ void Automata(int entero, char token[], int id_token)
                 break;
                 default:
                 printf("Se esperaba un númeroo para agregar a la partición.\n\n");
+                return;
+            }
+        break;
+        case 43: //parametros para rep
+            switch(id_token)
+            {
+                case 8: estado = 44; //path
+                break;
+                case 9: estado = 46;//name
+                break;
+                case 14: estado = 48;//id
+                break;
+                default:
+                    if(strcmp(tReport,"\0") != 0 && strcmp(fichero,"\0") != 0 && strcmp(cadId,"\0") != 0)
+                    { estado = 0; reportes(); }
+                    else
+                    {
+                        printf("Faltan parametros para el comando rep.\n\n");
+                    }
+                return;
+            }
+        break;
+        case 44: //rep, :: para path
+            switch(id_token)
+            {
+                case 15: estado = 45;
+                break;
+                default:
+                printf("Se esperaba ::\n\n");
+                return;
+            }
+        break;
+        case 45: //rep, cadena para path
+            switch(id_token)
+            {
+                case 18: estado = 43; strcpy(fichero,token);
+                break;
+                default:
+                printf("Se esperaba una cadena que indique donde se guardará el reporte.\n\n");
+                return;
+            }
+        break;
+        case 46: //rep, :: para name
+            switch(id_token)
+            {
+                case 15: estado = 47;
+                break;
+                default:
+                printf("Se esperaba ::\n\n");
+                return;
+            }
+        break;
+        case 47: //rep, tipo de reporte, para name
+            switch(id_token)
+            {
+                case 23: estado = 43; strcpy(tReport,token);
+                break;
+                case 24: estado = 43; strcpy(tReport,token);
+                break;
+                default:
+                printf("Se esperaba el nombre del reporte a mostrar.\n\n");
+                return;
+            }
+        break;
+        case 48: //rep, :: para id
+            switch(id_token)
+            {
+                case 15: estado = 49;
+                break;
+                default:
+                printf("Se esperaba ::\n\n");
+                return;
+            }
+        break;
+        case 49: //rep, path para el id
+            switch(id_token)
+            {
+                case 18: estado = 43; strcpy(cadId,token);
+                break;
+                default:
+                printf("Se esperaba una cadena que contenga el id de la partición.\n\n");
                 return;
             }
         break;
