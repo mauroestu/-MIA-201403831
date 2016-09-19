@@ -1,0 +1,24 @@
+digraph G { node[shape=box] a0 [label=< <TABLE BORDER = "1" CELLBORDER="1" CELLSPACING = "1"> 
+<TR><TD>Nombre</TD><TD>Valor</TD></TR>
+<TR><TD>mbr_tamanio</TD><TD>104857600</TD></TR>
+ <TR><TD>mbr_fecha_creacion</TD><TD>18/09/16 23:07:20</TD></TR>
+ <TR><TD>mbr_signature</TD><TD>1</TD></TR>
+<TR><TD>part_status_1</TD><TD>a</TD></TR>
+ <TR><TD>part_type_1</TD><TD>P</TD></TR>
+<TR><TD>part_fit_1</TD><TD>FF</TD></TR>
+ <TR><TD>part_start_1</TD><TD>497</TD></TR>
+<TR><TD>part_size_1</TD><TD>51200</TD></TR>
+ <TR><TD>part_name_1</TD><TD>part2</TD></TR>
+<TR><TD>part_status_Extended</TD><TD>a</TD></TR>
+ <TR><TD>part_type_Extended</TD><TD>Extendida</TD></TR>
+<TR><TD>part_fit_Extended</TD><TD>FF</TD></TR>
+ <TR><TD>part_start_Extended</TD><TD>51698</TD></TR>
+<TR><TD>part_size_Extended</TD><TD>10240</TD></TR>
+ <TR><TD>part_name_Extended</TD><TD>Ext</TD></TR>
+<TR><TD>part_status_Logica1</TD><TD>a</TD></TR>
+ <TR><TD>part_type_Logica1</TD><TD>Logica</TD></TR>
+<TR><TD>part_fit_Logica1</TD><TD>FF</TD></TR>
+ <TR><TD>part_start_Logica1</TD><TD>1</TD></TR>
+<TR><TD>part_size_Logica1</TD><TD>10240</TD></TR>
+ <TR><TD>part_name_Logica1</TD><TD>Logic</TD></TR>
+ </TABLE>>]; } 

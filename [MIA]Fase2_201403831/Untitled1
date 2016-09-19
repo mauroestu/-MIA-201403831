@@ -1,0 +1,72 @@
+char mkdisk[10] = "mkdisk"; int mkdisk_e = 1; char mkdisk_param[4] = "";
+char rmdisk[10] = "rmdisk"; int rmdisk_e = 2;
+char fdisk[10] = "fdisk"; int fdisk_e = 3;
+char mount[10] = "mount"; int mount_e = 4; char mount_param[2] = "";
+char umount[10] = "umount"; int umount_e = 5;
+
+char sizec[10] = "-size";   int sizec_e = 6;
+char unit[10] = "+unit"; int unit_e = 7;
+char path[10] = "-path"; int path_e = 8;
+char namec[10] = "-name"; int namec_e = 9;
+
+char type[10] = "+type"; int type_e = 10;
+char fit[10] = "+fit"; int fit_e = 11;
+char delet[10] = "+delete"; int delet_e = 12;
+char add[10] = "+add"; int add_e = 13;
+char idn[10] = "-id"; int idn_e = 14;
+char puntos[10] = "::"; int puntos_e = 15;
+char kbytes[10] = "K"; int kbytes_e = 16;
+char mega[10] = "M"; int mega_e = 17;
+int cadena = 18; int entero = 19;
+char vda[10] = "vd"; int vda_e = 20;
+char bytes[10] = "B"; int bytes_e = 21;
+
+char rep[10] = "rep"; int rep_e = 22;
+char rmbr[10] = "mbr"; int mbr_e = 23;
+char disk[10] = "disk"; int disk_e = 24;
+char exec[10] = "exec"; int exec_e = 25;
+
+char primaria[10] = "P"; int primaria_e = 26;
+char extendida[10] = "E"; int extendida_e = 27;
+char logica[10] = "L"; int logica_e = 28;
+
+char BestFit[10] = "BF"; int BestFit_e = 29;
+char FirstFit[10] = "FF"; int FirstFit_e = 30;
+char WorstFit[10] = "WF"; int WorstFit_e = 31;
+char Fast[10] = "Fast"; int Fast_e = 32;
+char Full[10] = "Full"; int Full_e = 33;
+////////////////////////////////////////////fase 2//////////////////
+char mkfs[10] = "mkfs"; int mkfs_e = 34;
+char FS[10] = "+Fs"; int fs_e = 35;
+char login[10] = "login"; int login_e = 36;
+char usr[10] = "-usr"; int usr_e = 37;
+char pwd[10] = "-pwd"; int pwd_e = 38;
+char logout[10] = "logout"; int logout_e = 39;
+char tunefs[10] = "tune2fs"; int tunefs_e = 40;
+char loss[10] = "loss"; int loss_e = 41;
+char recovery[10] = "recovery"; int recovery_e = 42;
+///////////////Administracion de usuarios y grupos//////////////////
+char mkgrp[10] = "mkgrp"; int mkgrp_e = 43;
+char rmgrp[10] = "rmgrp"; int rmgrp_e = 44;
+char mkusr[10] = "mkusr"; int mkusr_e = 45;
+char rmusr[10] = "rmusr"; int rmusr_e = 46;
+char grp[10] = "-grp"; int grp_e = 47;
+/////////////////Archivos y Carpetas////////////////////////
+char mkdirs[10] = "mkdir"; int mkdir_e = 48;
+char p[10] = "+p"; int p_e = 49;
+////////////////Reportes////////////////////////////////////
+char inode[10] = "inode"; int inode_e = 50;
+char journal[10] = "journaling"; int journal_e = 51;
+char block[10] = "block"; int block_e = 52;
+char bm_inode[10] = "bm_inode"; int bm_inode_e = 53;
+char bm_block[10] = "bm_block"; int bm_block_e = 54;
+char tree[10] = "tree"; int tree_e = 55;
+char sb[10] = "sb"; int sb_e = 56;
+char file[10] = "file"; int file_e = 57;
+char lsi[10] = "ls+i"; int lsi_e = 58;
+char lsl[10] = "ls+l"; int lsl_e = 59;
+/////////////////////////////////////////////////////////////
+char mkfile[10] = "mkfile"; int mkfile_e = 60;
+char nsize[10] = "+size"; int nsize_e = 61;
+char chgrp[10] = "chgrp"; int chgrp_e = 62;
+char ren[10] = "ren"; int ren_e = 63;

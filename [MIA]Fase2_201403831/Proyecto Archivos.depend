@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1474063418 source:/home/mauricio/Escritorio/Proyecto Archivos/terminal.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<time.h>
+	<ctype.h>
+	<math.h>
+	"Analizadores/Structs.h"
+	"Analizadores/Discos.h"
+	"Analizadores/Comandos.h"
+	"Analizadores/Archivos.h"
+	"Analizadores/Grupos.h"
+	"Analizadores/Reportes.h"
+	"Analizadores/lexico.h"
+
+1474250660 /home/mauricio/Escritorio/Proyecto Archivos/Analizadores/Structs.h
+
+1474261461 /home/mauricio/Escritorio/Proyecto Archivos/Analizadores/Discos.h
+
+1474261872 /home/mauricio/Escritorio/Proyecto Archivos/Analizadores/Comandos.h
+
+1474249863 /home/mauricio/Escritorio/Proyecto Archivos/Analizadores/Archivos.h
+
+1474175611 /home/mauricio/Escritorio/Proyecto Archivos/Analizadores/lexico.h
+
+1474262482 /home/mauricio/Escritorio/Proyecto Archivos/Analizadores/Reportes.h
+
+1474156877 /home/mauricio/Escritorio/Proyecto Archivos/Analizadores/Grupos.h
+

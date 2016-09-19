@@ -1,0 +1,2 @@
+digraph G { node[shape=box] a0 [label=< <TABLE BORDER = "1" CELLBORDER="1" CELLSPACING = "1"> 
+ <TR><TD>   MBR   </TD><TD>     Primaria     </TD><TD>     Libre      </TD><TD> <TABLE><TR><TD>Extendida</TD></TR> <TR><TD>Logica</TD></TR></TABLE></TD><TD> <TABLE><TR><TD>Extendida</TD></TR> <TR><TD>Libre</TD></TR></TABLE></TD><TD> <TABLE><TR><TD>Extendida</TD></TR> <TR><TD>Libre</TD></TR></TABLE></TD><TD> <TABLE><TR><TD>Extendida</TD></TR><TR><TD>Libre</TD></TR></TABLE></TD><TD> <TABLE><TR><TD>Extendida</TD></TR><TR><TD>Libre</TD></TR></TABLE></TD> </TR> </TABLE>>]; } 

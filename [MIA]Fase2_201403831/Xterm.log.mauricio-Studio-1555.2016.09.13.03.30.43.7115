@@ -1,0 +1,29 @@
+exec -path::"/home/mauricio/Escritorio/prueba.sh"
+Partición con el nombre prueba.dsk 1 creada en /home/mauricio/Escritorio/.
+
+Particion creada exitosamente.
+
+La partición part1 con id vda1 ha sido montada en el sistema.
+
+El disco /home/mauricio/Escritorio/prueba.dsk ha sido formateado 
+
+Usuario: root del Grupo: root ha iniciado sesión.
+
+Grupo "usuario" creado con exito.
+
+Grupo "hola" creado con exito.
+
+Grupo "jaja" creado con exito.
+
+FILE SYSTEM EXT2/EXT3 >> mkdir -id::"vda1" -name::"/home/puta/perra"
+Faltan parametros para el comando mkdir
+
+Faltan parametros para el comando mkdir
+
+Faltan parametros para el comando mkdir
+
+Faltan parametros para el comando mkdir
+
+FILE SYSTEM EXT2/EXT3 >> mkdir -d id::"vda1" -path::"/home/puta/perra"
+/home/putaU|
+FILE SYSTEM EXT2/EXT3 >> 

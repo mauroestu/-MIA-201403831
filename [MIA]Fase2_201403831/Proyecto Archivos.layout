@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="Analizadores/lexico.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="71886" topLine="197" />
+		</Cursor>
+		<Folding>
+			<Collapse line="99" />
+		</Folding>
+	</File>
+	<File name="Analizadores/Grupos.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="16462" topLine="1" />
+		</Cursor>
+		<Folding>
+			<Collapse line="2" />
+		</Folding>
+	</File>
+	<File name="Analizadores/Reportes.h" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="10381" topLine="12" />
+		</Cursor>
+		<Folding>
+			<Collapse line="1" />
+			<Collapse line="65" />
+			<Collapse line="142" />
+			<Collapse line="202" />
+			<Collapse line="340" />
+			<Collapse line="388" />
+			<Collapse line="402" />
+			<Collapse line="540" />
+		</Folding>
+	</File>
+	<File name="Analizadores/Comandos.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="17097" topLine="51" />
+		</Cursor>
+		<Folding>
+			<Collapse line="2" />
+			<Collapse line="25" />
+			<Collapse line="39" />
+			<Collapse line="51" />
+			<Collapse line="63" />
+			<Collapse line="78" />
+			<Collapse line="88" />
+			<Collapse line="102" />
+			<Collapse line="155" />
+			<Collapse line="210" />
+			<Collapse line="276" />
+			<Collapse line="308" />
+			<Collapse line="339" />
+			<Collapse line="379" />
+			<Collapse line="417" />
+			<Collapse line="431" />
+			<Collapse line="449" />
+			<Collapse line="463" />
+			<Collapse line="480" />
+			<Collapse line="530" />
+			<Collapse line="554" />
+			<Collapse line="569" />
+		</Folding>
+	</File>
+	<File name="Analizadores/Discos.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="22411" topLine="157" />
+		</Cursor>
+		<Folding>
+			<Collapse line="38" />
+			<Collapse line="66" />
+			<Collapse line="75" />
+			<Collapse line="88" />
+			<Collapse line="104" />
+			<Collapse line="120" />
+			<Collapse line="137" />
+			<Collapse line="170" />
+			<Collapse line="186" />
+			<Collapse line="202" />
+			<Collapse line="234" />
+			<Collapse line="278" />
+			<Collapse line="306" />
+			<Collapse line="321" />
+			<Collapse line="379" />
+			<Collapse line="400" />
+			<Collapse line="420" />
+			<Collapse line="442" />
+			<Collapse line="528" />
+			<Collapse line="544" />
+			<Collapse line="567" />
+			<Collapse line="579" />
+			<Collapse line="603" />
+			<Collapse line="616" />
+			<Collapse line="898" />
+			<Collapse line="937" />
+			<Collapse line="994" />
+			<Collapse line="1013" />
+			<Collapse line="1415" />
+		</Folding>
+	</File>
+	<File name="Analizadores/Archivos.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="41698" topLine="680" />
+		</Cursor>
+		<Folding>
+			<Collapse line="1" />
+			<Collapse line="15" />
+			<Collapse line="43" />
+		</Folding>
+	</File>
+	<File name="terminal.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2423" topLine="85" />
+		</Cursor>
+	</File>
+	<File name="Analizadores/Structs.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="18593" topLine="415" />
+		</Cursor>
+		<Folding>
+			<Collapse line="438" />
+			<Collapse line="577" />
+		</Folding>
+	</File>
+</CodeBlocks_layout_file>

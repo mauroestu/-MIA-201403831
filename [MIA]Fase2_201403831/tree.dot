@@ -1,0 +1,104 @@
+digraph G{
+graph [rankdir = "LR"];
+node [fontsize="16" shape = "ellipse"];
+edge [];"inodo 1" [ label = "<f0> ID: 1 | UId: 1 | 201403831 | Nombre: / | Tipo: 1 | Size: -1 | Permiso: 777| <f1> AD_0 = 1 ",
+fillcolor = "cornflowerblue",style = "filled",
+shape="record"
+];
+"inodo 2" [ label = "<f0> ID: 2 | UId: 1 | 201403831 | Nombre: /user.txt | Tipo: 0 | Size: 67 | Permiso: 777| <f1> AD_0 = 2 | <f2> AD_1 = 3 ",
+fillcolor = "cornflowerblue",style = "filled",
+shape="record"
+];
+"inodo 3" [ label = "<f0> ID: 3 | UId: 1 | 201403831 | Nombre: /home | Tipo: 1 | Size: -1 | Permiso: 664| <f1> AD_0 = 4 ",
+fillcolor = "cornflowerblue",style = "filled",
+shape="record"
+];
+"inodo 4" [ label = "<f0> ID: 4 | UId: 2 | 201403831 | Nombre: /puta | Tipo: 1 | Size: -1 | Permiso: 456| <f1> AD_0 = 5 ",
+fillcolor = "cornflowerblue",style = "filled",
+shape="record"
+];
+"inodo 5" [ label = "<f0> ID: 5 | UId: 1 | 201403831 | Nombre: /puta/sho | Tipo: 1 | Size: -1 | Permiso: 664| <f1> AD_0 = 6 ",
+fillcolor = "cornflowerblue",style = "filled",
+shape="record"
+];
+"inodo 6" [ label = "<f0> ID: 6 | UId: 1 | 201403831 | Nombre: /puta/sho/hola.txt | Tipo: 0 | Size: 100 | Permiso: 664| <f1> AD_0 = 7 | <f2> AD_1 = 8 ",
+fillcolor = "cornflowerblue",style = "filled",
+shape="record"
+];
+"bloque 1" [ label = "<f0>Carne: 201403831 | Bloque 1| <f1> Hijo_0 = 2 | <f2> Hijo_1 = 3 | <f3> Hijo_2 = 4 ",
+fillcolor = "goldenrod1",style = "filled",
+shape="record"
+];
+"bloque 2" [ label = "<f0> Carne: 201403831 | Bloque 2 | Contenido: 1,G,root      
+1,U,root      ,root      ,201403831 
+2,G,usuario  ",
+fillcolor = "springgreen3",style = "filled",
+shape="record"
+];
+"bloque 3" [ label = "<f0> Carne: 201403831 | Bloque 3 | Contenido:   
+2,U,root      ,mauro     ,12345     
+ ",
+fillcolor = "springgreen3",style = "filled",
+shape="record"
+];
+"bloque 4" [ label = "<f0>Carne: 201403831 | Bloque 4",
+fillcolor = "goldenrod1",style = "filled",
+shape="record"
+];
+"bloque 5" [ label = "<f0>Carne: 201403831 | Bloque 5| <f1> Hijo_0 = 5 ",
+fillcolor = "goldenrod1",style = "filled",
+shape="record"
+];
+"bloque 6" [ label = "<f0>Carne: 201403831 | Bloque 6| <f1> Hijo_0 = 6 ",
+fillcolor = "goldenrod1",style = "filled",
+shape="record"
+];
+"bloque 7" [ label = "<f0> Carne: 201403831 | Bloque 7 | Contenido: 0123456789012345678901234567890123456789012345678901234567890123 ",
+fillcolor = "springgreen3",style = "filled",
+shape="record"
+];
+"bloque 8" [ label = "<f0> Carne: 201403831 | Bloque 8 | Contenido: 0123456789012345678901234567890123456 ",
+fillcolor = "springgreen3",style = "filled",
+shape="record"
+];
+"inodo 1":f1 -> "bloque 1":f0 [
+id=0
+];
+"inodo 2":f1 -> "bloque 2":f0 [
+id=0
+];
+"inodo 2":f2 -> "bloque 3":f0 [
+id=0
+];
+"inodo 3":f1 -> "bloque 4":f0 [
+id=0
+];
+"inodo 4":f1 -> "bloque 5":f0 [
+id=0
+];
+"inodo 5":f1 -> "bloque 6":f0 [
+id=0
+];
+"inodo 6":f1 -> "bloque 7":f0 [
+id=0
+];
+"inodo 6":f2 -> "bloque 8":f0 [
+id=0
+];
+"bloque 1":f1 -> "inodo 2":f0 [
+id=0
+];
+"bloque 1":f2 -> "inodo 3":f0 [
+id=0
+];
+"bloque 1":f3 -> "inodo 4":f0 [
+id=0
+];
+"bloque 5":f1 -> "inodo 5":f0 [
+id=0
+];
+"bloque 6":f1 -> "inodo 6":f0 [
+id=0
+];
+
+}

@@ -1,0 +1,152 @@
+digraph G {
+node [shape=circle]; 
+node [style=filled];
+node [fillcolor="#EEEEEE"]; 
+node [color="#EEEEEE"];
+edge [color="#31CEF0"]; 
+"Inodo: 1 
+ i_uid: 1 
+ i_gid: 1 
+ i_perm: 777 
+ i_size: -1 
+ i_type: 1 
+ i_path: / 
+ i_atime: 17/09/16 17:18 
+ i_ctime: 17/09/16 17:18 
+ i_mtime: 17/09/16 17:18
+i_bloc_0: 1 
+ i_bloc_1: -1 
+ i_bloc_2: -1 
+ i_bloc_3: -1 
+ i_bloc_4: -1 
+ i_bloc_5: -1 
+ i_bloc_6: -1 
+ i_bloc_7: -1 
+ i_bloc_8: -1 
+ i_bloc_9: -1 
+ i_bloc_10: -1 
+ i_bloc_11: -1 
+ i_bloc_12: -1 
+ i_bloc_13: -1 
+ i_bloc_14: -1" -> "Inodo: 2 
+ i_uid: 1 
+ i_gid: 1 
+ i_perm: 777 
+ i_size: 67 
+ i_type: 0 
+ i_path: /user.txt 
+ i_atime: 17/09/16 17:18 
+ i_ctime: 17/09/16 17:18 
+ i_mtime: 17/09/16 17:18
+i_bloc_0: 2 
+ i_bloc_1: 3 
+ i_bloc_2: -1 
+ i_bloc_3: -1 
+ i_bloc_4: -1 
+ i_bloc_5: -1 
+ i_bloc_6: -1 
+ i_bloc_7: -1 
+ i_bloc_8: -1 
+ i_bloc_9: -1 
+ i_bloc_10: -1 
+ i_bloc_11: -1 
+ i_bloc_12: -1 
+ i_bloc_13: -1 
+ i_bloc_14: -1" -> "Inodo: 3 
+ i_uid: 1 
+ i_gid: 1 
+ i_perm: 664 
+ i_size: -1 
+ i_type: 1 
+ i_path: /home 
+ i_atime: 17/09/16 17:18 
+ i_ctime: 17/09/16 17:18 
+ i_mtime: 17/09/16 17:18
+i_bloc_0: 4 
+ i_bloc_1: -1 
+ i_bloc_2: -1 
+ i_bloc_3: -1 
+ i_bloc_4: -1 
+ i_bloc_5: -1 
+ i_bloc_6: -1 
+ i_bloc_7: -1 
+ i_bloc_8: -1 
+ i_bloc_9: -1 
+ i_bloc_10: -1 
+ i_bloc_11: -1 
+ i_bloc_12: -1 
+ i_bloc_13: -1 
+ i_bloc_14: -1" -> "Inodo: 4 
+ i_uid: 2 
+ i_gid: 1 
+ i_perm: 456 
+ i_size: -1 
+ i_type: 1 
+ i_path: /puta 
+ i_atime: 17/09/16 17:18 
+ i_ctime: 17/09/16 17:18 
+ i_mtime: 17/09/16 17:18
+i_bloc_0: 5 
+ i_bloc_1: -1 
+ i_bloc_2: -1 
+ i_bloc_3: -1 
+ i_bloc_4: -1 
+ i_bloc_5: -1 
+ i_bloc_6: -1 
+ i_bloc_7: -1 
+ i_bloc_8: -1 
+ i_bloc_9: -1 
+ i_bloc_10: -1 
+ i_bloc_11: -1 
+ i_bloc_12: -1 
+ i_bloc_13: -1 
+ i_bloc_14: -1" -> "Inodo: 5 
+ i_uid: 1 
+ i_gid: 1 
+ i_perm: 664 
+ i_size: -1 
+ i_type: 1 
+ i_path: /puta/sho 
+ i_atime: 17/09/16 17:18 
+ i_ctime: 17/09/16 17:18 
+ i_mtime: 17/09/16 17:18
+i_bloc_0: 6 
+ i_bloc_1: -1 
+ i_bloc_2: -1 
+ i_bloc_3: -1 
+ i_bloc_4: -1 
+ i_bloc_5: -1 
+ i_bloc_6: -1 
+ i_bloc_7: -1 
+ i_bloc_8: -1 
+ i_bloc_9: -1 
+ i_bloc_10: -1 
+ i_bloc_11: -1 
+ i_bloc_12: -1 
+ i_bloc_13: -1 
+ i_bloc_14: -1" -> "Inodo: 6 
+ i_uid: 1 
+ i_gid: 1 
+ i_perm: 664 
+ i_size: 100 
+ i_type: 0 
+ i_path: /puta/sho/hola.txt 
+ i_atime: 17/09/16 17:18 
+ i_ctime: 17/09/16 17:18 
+ i_mtime: 17/09/16 17:18
+i_bloc_0: 7 
+ i_bloc_1: 8 
+ i_bloc_2: -1 
+ i_bloc_3: -1 
+ i_bloc_4: -1 
+ i_bloc_5: -1 
+ i_bloc_6: -1 
+ i_bloc_7: -1 
+ i_bloc_8: -1 
+ i_bloc_9: -1 
+ i_bloc_10: -1 
+ i_bloc_11: -1 
+ i_bloc_12: -1 
+ i_bloc_13: -1 
+ i_bloc_14: -1"
+}
